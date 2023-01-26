@@ -1,0 +1,51 @@
+name: ${project.name}
+version: ${project.version}
+description: ${project.description}
+author: Chris Naude
+main: com.cnaude.mutemanager.MuteManager
+api-version: 1.16
+loadbefore: 
+  - Essentials
+  - TownyChat
+commands:
+    mute:
+        description: Mute a player
+        usage: /mute [player] ([minutes|perm]) ([reason])    
+    unmute:
+        description: UnMute a player
+        usage: /unmute [player]
+    mutelist:
+        description: List muted players
+        usage: /mutelist
+    mutereload:
+        description: Reload configuration
+        usage: /mutereload
+permissions: 
+    mutemanager.mute:
+        description: Gives player access to /mute.
+        default: op 
+    mutemanager.unmute:
+        description: Gives player access to /unmute.
+        default: op 
+    mutemanager.mutelist:
+        description: Gives player access to /mutelist.
+        default: op
+    mutemanager.listen:
+        description: If AdminNotify is true users with this node can read muted messages.
+        default: false   
+    mutemanager.mutenotify:
+        description: Receive broadcast messages when a player is muted.
+        default: op
+    mutemanager.unmutenotify:
+        description: Receive broadcast messages when a player is unmuted.
+        default: op 
+    mutemanager.reload:
+        description: Gives player access to /mutereload.
+        default: op
+    mutemanager.muteexempt:
+        description: Exempts player from being muted
+        default: false
+    mutemanager.muteall:
+        description: Allows player to use * when muting
+        default: op
+     
